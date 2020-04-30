@@ -8,24 +8,29 @@ import (
 )
 
 // Exec executes timeout
-func Exec(waitSecond int) {
+func Exec(waitSecond int) error {
 	fmt.Printf("\rWaiting for %v seconds, press any key to quit...", waitSecond)
-	done := make(chan struct{})
+	done := make(chan error)
 	go func() {
-		if err := keyboard.Open(); err == nil {
+		err := keyboard.Open()
+		if err == nil {
 			keyboard.GetKey()
 		}
-		close(done)
+		done <- err
 	}()
-	defer keyboard.Close()
 
-	for i := waitSecond; i > 0; i-- {
+	defer fmt.Println("")
+FOR:
+	for i := waitSecond - 1; i >= 0; i-- {
 		select {
-		case <-done:
-			fmt.Println("")
-			return
+		case err := <-done:
+			if err != nil {
+				return err
+			}
+			break FOR
 		case <-time.After(time.Second):
-			fmt.Printf("\rWaiting for %v seconds, press any key to quit...", i-1)
+			fmt.Printf("\rWaiting for %v seconds, press any key to quit...", i)
 		}
 	}
+	return keyboard.Close()
 }
