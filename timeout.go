@@ -7,7 +7,7 @@ import (
 	"github.com/eiannone/keyboard"
 )
 
-func getKeyAsync() <-chan error {
+func detectKeyInputAsync() <-chan error {
 	done := make(chan error)
 	go func() {
 		err := keyboard.Open()
@@ -23,7 +23,7 @@ func getKeyAsync() <-chan error {
 // Exec executes timeout
 func Exec(waitSecond int) error {
 	fmt.Printf("\rWaiting for %v seconds, press any key to quit...", waitSecond)
-	done := getKeyAsync()
+	done := detectKeyInputAsync()
 
 	defer fmt.Println("")
 FOR:
