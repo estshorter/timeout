@@ -1,20 +1,17 @@
 package timeout
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
-func TestExec(t *testing.T) {
+func TestPackage(t *testing.T) {
 	type args struct {
 		waitSecond int
 	}
-	tests := []struct {
-		name string
-		args args
-	}{
-		{"test1", args{3}},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			Exec(tt.args.waitSecond)
-		})
-	}
+	fmt.Println("start")
+	Exec(3)
+	fmt.Println("middle")
+	Exec(3)
+	fmt.Println("end")
 }
