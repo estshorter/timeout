@@ -26,14 +26,14 @@ func Exec(waitSecond int) error {
 	done := detectKeyInputAsync()
 
 	defer fmt.Println("")
-FOR:
+FOR_LABEL:
 	for i := waitSecond - 1; i >= 0; i-- {
 		select {
 		case err := <-done:
 			if err != nil {
 				return err
 			}
-			break FOR
+			break FOR_LABEL
 		case <-time.After(time.Second):
 			fmt.Printf("\rWaiting for %v seconds, press any key to quit...", i)
 		}
