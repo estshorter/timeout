@@ -1,4 +1,4 @@
-github.com/eiannone/keyboard v0.0.0-20200430171636-32d709cec0bd h1:UbaECNorGCZw2IZnAJ6QkuCLnQ9+EP7a5cTyh4w6xgA=
-github.com/eiannone/keyboard v0.0.0-20200430171636-32d709cec0bd/go.mod h1:Xoiu5VdKMvbRgHuY7+z64lhu/7lvax/22nzASF6GrO8=
-golang.org/x/sys v0.0.0-20200430202703-d923437fa56d h1:xmcims+WSpFuY56YEzkKF6IMDxYAVDRipkQRJfXUBZk=
-golang.org/x/sys v0.0.0-20200430202703-d923437fa56d/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+github.com/eiannone/keyboard v0.0.0-20200508000154-caf4b762e807 h1:jdjd5e68T4R/j4PWxfZqcKY8KtT9oo8IPNVuV4bSXDQ=
+github.com/eiannone/keyboard v0.0.0-20200508000154-caf4b762e807/go.mod h1:Xoiu5VdKMvbRgHuY7+z64lhu/7lvax/22nzASF6GrO8=
+golang.org/x/sys v0.0.0-20210820121016-41cdb8703e55 h1:rw6UNGRMfarCepjI8qOepea/SXwIBVfTKjztZ5gBbq4=
+golang.org/x/sys v0.0.0-20210820121016-41cdb8703e55/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=

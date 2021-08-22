@@ -6,9 +6,9 @@ import (
 )
 
 func TestPackage(t *testing.T) {
-	type args struct {
-		waitSecond int
-	}
+	// type args struct {
+	// 	waitSecond int
+	// }
 	fmt.Println("start")
 	Exec(3)
 	fmt.Println("middle")

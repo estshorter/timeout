@@ -1,8 +1,7 @@
 module github.com/estshorter/timeout
 
-go 1.14
+go 1.17
 
-require (
-	github.com/eiannone/keyboard v0.0.0-20200430171636-32d709cec0bd
-	golang.org/x/sys v0.0.0-20200430202703-d923437fa56d // indirect
-)
+require github.com/eiannone/keyboard v0.0.0-20200508000154-caf4b762e807
+
+require golang.org/x/sys v0.0.0-20210820121016-41cdb8703e55 // indirect
